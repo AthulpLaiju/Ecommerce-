@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Aler Template">
+    <meta name="keywords" content="Aler, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DREAM HOME</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Wrapper Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <span class="icon_close"></span>
+        </div>
+        <div class="logo">
+            <a href="./index.html">
+                <img src="/static/img/logo1.png" alt="">
+            </a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="om-widget">
+            <ul>
+                <li><i class="icon_mail_alt"></i> Justin.support@gmail.com</li>
+                <li><i class="fa fa-mobile-phone"></i> 7902786272<span>8796867584</span></li>
+            </ul>
+        </div>
+        <div class="om-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Wrapper End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="hs-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="/index/"><img src="/static/img/logo1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="ht-widget">
+                            <ul>
+                                <li><i class="icon_mail_alt"></i> Justin.support@gmail.com</li>
+                                <li><i class="fa fa-mobile-phone"></i> 7902786272<span>8796867584</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <span class="icon_menu"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu" style="text-align: right;">
+                            <ul  >
+                                <li class="active"><a href="/index/">Home</a></li>
+                                <li><a href="#">Registration</a>
+                                    <ul class="dropdown">
+                                        <li style="text-align: left;"><a href="/engreg/">Engineer Registration</a></li>
+                                        <li style="text-align: left;"><a href="/reg/">Client Registration</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li style="text-align: left;"><a href="/index/">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+
+
+    <!-- Feature Property Section Begin -->
+    <section class="feature-property-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 p-0">
+                    <div class="feature-property-left">
+                        <div class="section-title">
+                            <h4>Engineer Registration</h4>
+                        </div>
+                        <form action="/engaction/" enctype="multipart/form-data" method="POST">{% csrf_token %}
+                                 <table align="center" style=" width: max-content;color: aliceblue;">
+                                 
+                                    <tr>
+                                        <td>Name</td><td><input type="text" name="name"required style="width: 70%;border-radius: 25px;padding: 5px;"></td>
+                                 </tr>
+                                 <tr>
+                                     <td>Email</td><td><input type="email" name="email"required style="width: 70%;border-radius: 25px;padding: 5px;"></td>
+                                 </tr>
+                                 <tr>
+                                     <td>City</td><td><input type="text" name="city"required style="width: 70%;border-radius: 25px;padding: 5px;" required></td>
+                                 </tr>
+                                 <tr>
+                                     <td>Phone Number</td><td><input type="text" name="phno"maxlength="10" required style="width: 70%;border-radius: 25px;padding: 5px;"></td>
+                                 </tr>
+                                 <tr>
+                                     <td>License Number</td><td><input type="text" name="lno"required style="width: 70%;border-radius: 25px;padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Profile Pic</td><td><input type="file" name="p_image"></td>
+                                </tr>
+                                <tr>
+                                    <td>Upload License</td><td><input type="file" name="pf_image"></td>
+                                </tr>
+                                 <tr>
+                                     <td>Password</td><td><input type="password" name="pass"required style="width: 70%;border-radius: 25px;padding: 5px;"></td>
+                                 </tr>
+                                 <tr><td colspan="2" align="center"  >
+                                    <input type="submit" value="Register">
+                                    </td></tr>
+                             
+                                </table>
+                             </form>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7 p-0">
+                    <div class="fp-slider owl-carousel">
+                        <div class="fp-item set-bg" data-setbg="/static/img/feature-property/fp-1.jpg">
+                           
+                        </div>
+                        <div class="fp-item set-bg" data-setbg="/static/img/feature-property/fp-2.jpg">
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature Property Section End -->
+
+    <!-- Team Section Begin -->
+       <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hs-slider owl-carousel">
+                <div class="hs-item set-bg" data-setbg="/static/img/hero/hero-1.jpg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hc-inner-text">
+                                <div class="hc-text">
+                                    <h4>Justin antony</h4>
+                                    <p><span class="icon_pin_alt"></span> Alappuzha,Kerala</p>
+                                    <div class="label">Build Your Plans</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hs-item set-bg" data-setbg="/static/img/hero/hero-2.jpg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hc-inner-text">
+                                <div class="hc-text">
+                                    <h4>Athul P Laiju</h4>
+                                    <p><span class="icon_pin_alt"></span> Alappuzha,Kerala</p>
+                                    <div class="label">Build Your Plan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hs-item set-bg" data-setbg="/static/img/hero/hero-3.jpg">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hc-inner-text">
+                                <div class="hc-text">
+                                    <h4>Justin antony</h4>
+                                    <p><span class="icon_pin_alt"></span> Alappuzha,Kerala</p>
+                                    <div class="label">Build Your Plans</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Search Section Begin -->
+    <section class="search-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h4>Login Details</h4>
+                    </div>
+                </div>
+                 
+            </div>
+            <div class="search-form-content">
+                <form action="/searchlogin/" method="POST" class="filter-form">{% csrf_token %}
+                  
+                  <input type="text" name="t1" required class="sm-width" placeholder="Enter your Username"  style="padding: 8px;border-radius: 5px;">
+                  <input type="password" name="t2" required class="sm-width" placeholder="Enter your Password" style="padding: 8px;border-radius: 5px;">
+                     
+                   
+                    <button type="submit" class="search-btn sm-width">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Search Section End -->
+
+      <!-- Property Section Begin -->
+      <section class="property-section latest-property-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title">
+                        <h4>Upcoming Projects</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row property-filter">
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img1.jpg">
+                            <div class="label">Build Your Plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.600/-</div>
+                            <h5><a href="#">Home in Merrick Way</a></h5>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 1200 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>4 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 2 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Athul P Laiju</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        7902786272
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mix all restaurent hotel">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img2.jpg">
+                            <div class="label">Build Your Plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.700/-</div>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 1400 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>6 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 2 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Joyal Jose</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                       8907896755
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mix all apart office">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img3.jpg">
+                            <div class="label c-red">Build Your plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.1000/-</div>
+                            <h5><a href="#">Vrindavan Flora</a></h5>
+                            <p><span class="icon_pin_alt"></span> No. 15, 16, 17-1A And 17-2, Rasayani, Rasayani</p>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 2000 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>6 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 2 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Jithin Devasia</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        8905785755
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mix all hotel restaruent">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img4.jpg">
+                            <div class="label c-red">Build Your Plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.400/-</div>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 1000 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>3 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 1 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Athul P Laiju</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        8798576986
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mix all office hotel">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img5.jpg">
+                            <div class="label c-magenta">Build Your Plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.600/-</div>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 1200 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>4 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 2 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Githin Devasia</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        7876767679
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mix house apart office">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="/static/img/property/img1.jpg">
+                            <div class="label">Build Your Plan</div>
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">Plan Cost Rs.600/-</div>
+                            <h5><a href="#">GoldCrest Residency</a></h5>
+                            <ul>
+                                <li><i class="fa fa-object-group"></i> 1200 Sq.Feet</li>
+                                <li><i class="fa fa-bathtub"></i>4 Bedrooms</li>
+                                <li><i class="fa fa-bed"></i> 2 Living Rooms</li>
+                                <li><i class="fa fa-automobile"></i>1 Car Porch</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="/static/img/property/posted-by/pb-1.jpg" alt="">
+                                        <h6>Joyal Jose</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        8907867565
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Property Section End -->
+
+    <!-- Chooseus Section Begin -->
+    
+    <!-- Chooseus Section End -->
+
+    <!-- Feature Property Section Begin -->
+               
+    <!-- Feature Property Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="section-title">
+                        <h4>Help Desk</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="team-btn">
+                        <a href="#"><i class="fa fa-user"></i> Our Architects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="ts-item">
+                        <div class="ts-text">
+                            <img src="/static/img/team/team-1.jpg" alt="">
+                            <h5>Justin Antony</h5>
+                            <span>7902786272</span>
+                            <div class="ts-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ts-item">
+                        <div class="ts-text">
+                            <img src="/static/img/team/team-2.jpg" alt="">
+                            <h5>Rose mary</h5>
+                            <span>809786867</span>
+                            <div class="ts-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ts-item">
+                        <div class="ts-text">
+                            <img src="/static/img/team/team-3.jpg" alt="">
+                            <h5>Joyal Jose</h5>
+                            <span>8906879787</span>
+                            <div class="ts-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Categories Section Begin -->
+   
+    <!-- Categories Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h4>What our client says?</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row testimonial-slider owl-carousel">
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">is
+                            <p>LThere’s no doubt that Home Designer Pro could complete any home design task you wanted, from sunken swimming pools to walk-in wardrobes. It creates visually stunning 3D images and renderings, as well as ultra-realistic walkthroughs, and it’s also pretty practical, with built-in cost estimating sheets. And don’t get us started on the extensive furniture and object library available, 
+                                which has thousands of branded items ready to place into your virtual home. </p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="/static/img/testimonial-author/ta-1.jpg" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Rajiv</h5>
+                                <span>Client</span>
+                                <div class="ta-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">
+                            <p>There’s no doubt that Home Designer Pro could complete any home design task you wanted, from sunken swimming pools to walk-in wardrobes. It creates visually stunning 3D images and renderings, as well as ultra-realistic walkthroughs, and it’s also pretty practical, with built-in cost estimating sheets. And don’t get us started on the extensive furniture and object library available,
+                                 which has thousands of branded items ready to place into your virtual home. .</p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="/static/img/testimonial-author/ta-2.jpg" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Jithin Devasia</h5>
+                                <span>Client</span>
+                                <div class="ta-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-item">
+                        <div class="ti-text">
+                            <p>There’s no doubt that Home Designer Pro could complete any home design task you wanted, from sunken swimming pools to walk-in wardrobes. It creates visually stunning 3D images and renderings, as well as ultra-realistic walkthroughs, and it’s also pretty practical, with built-in cost estimating sheets. And don’t get us started on the extensive furniture and object library available, 
+                                which has thousands of branded items ready to place into your virtual home. </p>
+                        </div>
+                        <div class="ti-author">
+                            <div class="ta-pic">
+                                <img src="/static/img/testimonial-author/ta-1.jpg" alt="">
+                            </div>
+                            <div class="ta-text">
+                                <h5>Joyal Jose</h5>
+                                <span>Client</span>
+                                <div class="ta-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Logo Carousel Begin -->
+   
+    <!-- Logo Carousel End -->
+
+    <!-- Contact Section Begin -->
+
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-about">
+                        <div class="fs-logo">
+                            <a href="#">
+                                <img src="/static/img/f-logo.png" alt="">
+                            </a>
+                        </div>
+                        <p>There’s no doubt that Home Designer Pro could complete any home design task you wanted, from sunken swimming pools to walk-in wardrobes.</p>
+                        <div class="fs-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="fs-widget">
+                        <h5>Help</h5>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                            <li><a href="#">Knowledgebase</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h5>For more details</h5>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text">
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/mixitup.min.js"></script>
+    <script src="/static/js/jquery-ui.min.js"></script>
+    <script src="/static/js/jquery.nice-select.min.js"></script>
+    <script src="/static/js/jquery.slicknav.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.richtext.min.js"></script>
+    <script src="/static/js/image-uploader.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

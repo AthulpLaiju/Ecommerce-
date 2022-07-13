@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" style="width: 100%;background: aliceblue;box-shadow: 3px 5px 1px #1089ff;color: black;font-size: 22px;">
+        <tr>
+            <th>EngineerId</th><th>Engineer Name</th><th>Email</th><th>City</th>
+        <th>Phone Number</th><th>Liscence Number</th><th>Liscence Image</th>
+        {% for s in stu %}
+        <tr>
+            <td>{{s.engid}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.city}}</td>
+            <td>{{s.phno}}</td>
+            <td>{{s.lno}}</td>
+            <td>{{s.p_image}}</td>
+            <td> <a href="/userdel?id={{s.engid}}" style="color: red;font-weight: bold;font-size: 14px;">Remove</a></td>
+        </tr>
+        {% endfor %}
+        </table>  
+</body>
+</html>
